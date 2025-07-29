@@ -1,0 +1,12 @@
+.word-meaning-popup {
+    position: fixed;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  

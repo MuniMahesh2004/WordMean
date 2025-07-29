@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Instant Word Meaning",
+  "version": "1.0",
+  "description": "Get word meanings instantly by right-clicking selected text.",
+  "permissions": ["contextMenus", "scripting", "activeTab", "storage","tabs" ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
