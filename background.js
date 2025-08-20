@@ -1,9 +1,5 @@
-function isRestrictedUrl(url) {
-  return (
-    url.startsWith("chrome://") ||
-    url.includes("chrome.google.com/webstore") ||
-    url.startsWith("edge://")
-  );
+function safeUrl(url) {
+  return url.startsWith("https://") || url.startsWith("http://");
 }
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -15,37 +11,25 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId === "getWordMeaning") {
+  if (info.menuItemId === "getWordMeaning" && tab.id) {
     const url = tab.url || "";
-
-    if (isRestrictedUrl(url)) {
-      // Show badge if restricted
+    if (!safeUrl(url)) {
+      console.log("Restricted or unsupported page URL, ignoring action:", url);
       await chrome.action.setBadgeText({ tabId: tab.id, text: "!" });
       await chrome.action.setBadgeBackgroundColor({ tabId: tab.id, color: "red" });
-
-      // Optionally, store state if needed
-      chrome.storage.local.set({ restrictedPage: true });
-    } else {
-      // Normal case: inject script
-      chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        files: ["inject.js"],
-        world: "MAIN"
-      });
-
-      // Dispatch event with the selected word
-      chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        func: (text) => {
-          window.dispatchEvent(new CustomEvent("play-word-meaning", { detail: text }));
-        },
-        args: [info.selectionText],
-        world: "MAIN"
-      });
-
-      // Clear badge
-      chrome.action.setBadgeText({ tabId: tab.id, text: "" });
-      chrome.storage.local.set({ restrictedPage: false });
+      await chrome.storage.local.set({ restrictedPage: true });
+      return;
     }
+
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: (text) =>
+        window.dispatchEvent(new CustomEvent("play-word-meaning", { detail: text })),
+      args: [info.selectionText || ""],
+      world: "MAIN"
+    });
+
+    await chrome.action.setBadgeText({ tabId: tab.id, text: "" });
+    await chrome.storage.local.set({ restrictedPage: false });
   }
 });

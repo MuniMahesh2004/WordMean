@@ -3,23 +3,31 @@
   "name": "Instant Word Meaning",
   "version": "1.0",
   "description": "Get word meanings instantly by right-clicking selected text.",
-  "permissions": ["contextMenus", "scripting", "activeTab", "storage","tabs" ],
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "activeTab",
+    "storage",
+    "tabs",
+    "notifications"
+  ],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "48": "icon.png"
     }
   },
-  "web_accessible_resources": [
-    {
-      "resources": ["inject.js"],
-      "matches": ["<all_urls>"]
-    }
-  ],
   "icons": {
     "48": "icon.png"
   }
