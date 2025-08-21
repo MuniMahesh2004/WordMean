@@ -1,32 +1,29 @@
 # 📖 Dictionary Extension
 
-A lightweight browser extension to quickly look up word definitions and pronunciations without leaving your page.  
+A simple and lightweight browser extension that helps you quickly find the **meaning** and **pronunciation** of any word without leaving the page.  
 
-## 🚀 Features
-- Instant word lookup with a popup.  
-- Displays definitions and pronunciations.  
-- Simple and clean UI.  
-- Works on major browsers (Chrome / Edge).  
+Instead of selecting, copying, and pasting into a new tab, this extension saves your time by showing instant results **right on the page**.  
 
 ---
 
-## 🛠️ Installation
+## 🚀 Features  
 
-1. Clone or download this repository.  
-2. Open your browser (Edge / Chrome).  
-3. Go to **Extensions → Manage Extensions → Load unpacked**.  
-4. Select the project folder.  
-5. The extension will now be available in your browser.  
-
----
-
-## 📸 Screenshots
-(Add screenshots here showing the popup with definition and pronunciation feature)  
+- 🔍 **Instant Word Meaning** – Select any word and get its definition instantly.  
+- 📝 **Define Popup** – After selecting a word, click **"Define"** to see a clean popup with the word’s definition.  
+- 🔊 **Word Pronunciation** – Hear how the word is pronounced with a single click.  
+- ⚡ **Time-Saving** – No need to copy-paste into a dictionary website.  
+- 🎨 **Clean Popup Design** – Tooltip-style popup with a small triangle pointer.  
+- 🌑 **Shadowed Edges** – Triangle popup has shadows on left and right edges for a clear look.  
+- 🖥️ **Works Anywhere** – Supports most websites you browse.  
 
 ---
 
-## 🎥 Demo
-(Add a demo GIF here to show the extension in action)  
+## 🛠️ How It Works  
+
+1. **Highlight (select) a word** on any webpage.  
+2. **Click "Define"** → A popup will appear with the word’s definition.  
+3. A popup will also show the **meaning and pronunciation**.  
+4. **Click the 🔊 icon** to listen to the word’s pronunciation. 
 
 ---
 
@@ -39,11 +36,6 @@ A lightweight browser extension to quickly look up word definitions and pronunci
 
 ## 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.  
-
----
-
-## 📜 License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
 
 ---
 
