@@ -19,7 +19,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.action.setBadgeText({ tabId: tabs.id, text: "!" });
       chrome.action.setBadgeBackgroundColor({ tabId: tabs.id, color: "red" });
     } else {
-      message.textContent = "Select a word and right-click to get its meaning.";
+      message.textContent = "Select a word and Click define";
       chrome.action.setBadgeText({ tabId: tabs.id, text: "" });
       message.style.color = 'green';
     }

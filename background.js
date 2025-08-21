@@ -2,14 +2,6 @@ function safeUrl(url) {
   return url.startsWith("https://") || url.startsWith("http://");
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: "getWordMeaning",
-    title: "Get Meaning",
-    contexts: ["selection"]
-  });
-});
-
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "getWordMeaning" && tab.id) {
     const url = tab.url || "";
