@@ -1,57 +1,50 @@
-📖 Word Meaning Extension
+# 📖 Dictionary Extension
 
-A simple and lightweight browser extension that helps you quickly find the meaning and pronunciation of any word without leaving the page.
+A lightweight browser extension to quickly look up word definitions and pronunciations without leaving your page.  
 
-Instead of selecting, copying, and pasting into a new tab, this extension saves your time by showing instant results right on the page.
+## 🚀 Features
+- Instant word lookup with a popup.  
+- Displays definitions and pronunciations.  
+- Simple and clean UI.  
+- Works on major browsers (Chrome / Edge).  
 
-🚀 Features
+---
 
-🔍 Instant Word Meaning – Select any word and get its definition instantly.
+## 🛠️ Installation
 
-🔊 Word Pronunciation – Hear how the word is pronounced with a single click.
+1. Clone or download this repository.  
+2. Open your browser (Edge / Chrome).  
+3. Go to **Extensions → Manage Extensions → Load unpacked**.  
+4. Select the project folder.  
+5. The extension will now be available in your browser.  
 
-⚡ Time-Saving – No need to copy-paste into a dictionary website.
+---
 
-🎨 Clean Popup Design – Displays meaning in a neat tooltip-style popup with a small triangle pointer.
+## 📸 Screenshots
+(Add screenshots here showing the popup with definition and pronunciation feature)  
 
-🌑 Shadowed Edges – Triangle popup has shadows on left and right edges for a clear look.
+---
 
-🖥️ Works Anywhere – Supports most websites you browse.
+## 🎥 Demo
+(Add a demo GIF here to show the extension in action)  
 
-🛠️ How It Works
+---
 
-Highlight (select) a word on any webpage.
+## 🚀 Future Enhancements
+- 🌐 Support for multiple languages.  
+- 🌙 Dark mode for popup.  
+- 📶 Offline word lookup.  
 
-Click "Define" → A popup will appear with the word’s definition.
+---
 
-A popup will also show the meaning and pronunciation.
+## 🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.  
 
-Click the 🔊 icon to listen to the word’s pronunciation.
+---
 
-📦 Installation
-Load as an Unpacked Extension
+## 📜 License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
 
-Clone or download this repository.
+---
 
-git clone https://github.com/YourUsername/word-meaning-extension.git
-
-
-Open Chrome/Edge → Go to Extensions (chrome://extensions/).
-
-Enable Developer Mode (top-right corner).
-
-Click Load Unpacked → Select the project folder.
-
-Done! 🎉 Start using the extension.
-
-🔮 Future Enhancements
-
-📚 Support for synonyms & antonyms.
-
-🌍 Multi-language word meanings.
-
-🧠 Offline dictionary support.
-
-🤝 Contributing
-
-Pull requests are welcome! If you’d like to improve features or fix bugs, feel free to fork and create a PR.
+Made with ❤️ to make word lookup faster and smarter.
